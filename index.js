@@ -10,7 +10,8 @@ function analyse(combineTool) {
         if (body == 'Not Found') {
             throw new Error('路径：' + this.path + ' 对应的文件没有找到')
         }
-        body = yield combineTool.processContent(path.join(__dirname, this.path), '', body)
+
+        body = yield combineTool.processContent(path.join(process.cwd(), this.path), '', body)
         this.body = body.content;
     }
 }
