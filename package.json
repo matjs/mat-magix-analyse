@@ -1,6 +1,6 @@
 {
   "name": "mat-magix-analyse",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "开发环境用magix-combine解析处理magix view",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,9 @@
   },
   "author": "chongzhi",
   "license": "MIT",
+  "dependencies": {
+    "ws": "2.3.1"
+  },
   "bugs": {
     "url": "https://github.com/matjs/mat-magix-analyse/issues"
   },
