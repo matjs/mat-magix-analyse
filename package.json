@@ -13,7 +13,7 @@
   "author": "chongzhi",
   "license": "MIT",
   "dependencies": {
-    "ws": "2.3.1"
+    "ws": "7.2.1"
   },
   "bugs": {
     "url": "https://github.com/matjs/mat-magix-analyse/issues"
