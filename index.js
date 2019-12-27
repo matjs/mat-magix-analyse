@@ -4,7 +4,9 @@ const WebSocket = require('ws')
 /**
  * 分析js,打包view
  */
-function analyse(combineTool, ws) {
+function analyse(combineTool, ws, cwd) {
+    const _cwd = cwd || process.cwd()
+
     return function* combine(next) {
         yield next
         let body = this.body.toString()
@@ -13,7 +15,7 @@ function analyse(combineTool, ws) {
         }
 
         try {
-            body = yield combineTool.processContent(path.join(process.cwd(), this.path), '', body)
+            body = yield combineTool.processContent(path.join(_cwd, this.path), '', body)
         } catch (err) {
             //多窗口多客户端同时发送信息
             ws.clients.forEach(client => {
