@@ -1,6 +1,6 @@
 {
   "name": "mat-magix-analyse",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "开发环境用magix-combine解析处理magix view",
   "main": "index.js",
   "scripts": {

@@ -9,8 +9,13 @@ function analyse(combineTool, ws, cwd) {
 
     return function* combine(next) {
         yield next
-        let body = this.body.toString()
-        if (body == 'Not Found') {
+
+        let body
+        try {
+            body = this.body.toString()
+        } catch (error) { }
+
+        if (body == 'Not Found' || !body) {
             throw new Error('路径：' + this.path + ' 对应的文件没有找到')
         }
 
